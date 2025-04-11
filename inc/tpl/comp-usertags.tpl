@@ -3,12 +3,12 @@
 <div class="box-tabs-container clearfix"> 
     <h2>Tags</h2> 
     <ul class="box-tabs"> 
-        <li id="tab-1-6-1"><a href="#">Ubers like...</a><span class="tab-spacer"></span></li> 
+        <li id="tab-1-6-1"><a href="#">%site_name%s like...</a><span class="tab-spacer"></span></li> 
         <li id="tab-1-6-2" class="selected"><a href="#">My Tags</a><span class="tab-spacer"></span></li> 
     </ul> 
 </div> 
     <div id="tab-1-6-1-content"  style="display: none"> 
-    		<div class="progressbar"><img src="http://images.habbo.com/habboweb/%web_build%/web-gallery/images/progress_bubbles.gif" alt="" width="29" height="6" /></div> 
+    		<div class="progressbar"><img src="%site_name%/web-gallery/images/progress_bubbles.gif" alt="" width="29" height="6" /></div> 
     		<a href="/habblet/proxy?hid=h22" class="tab-ajax"></a> 
     </div> 
     <div id="tab-1-6-2-content" > 

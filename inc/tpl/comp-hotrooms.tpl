@@ -38,11 +38,11 @@ function GenerateRoomOccupancy($usersNow, $usersMax)
 <h2 class="title">Hot Rooms</h2> 
 
 <style type="text/css">
-.room-occupancy-1 { background-image: url('http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/images/rooms/room_icon_1.gif') !important; }
-.room-occupancy-2 { background-image: url('http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/images/rooms/room_icon_2.gif') !important; }
-.room-occupancy-3 { background-image: url('http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/images/rooms/room_icon_3.gif') !important; }
-.room-occupancy-4 { background-image: url('http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/images/rooms/room_icon_4.gif') !important; }
-.room-occupancy-5 { background-image: url('http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/images/rooms/room_icon_5.gif') !important; }
+.room-occupancy-1 { background-image: url('%static_url%/web-gallery/v2/images/rooms/room_icon_1.gif') !important; }
+.room-occupancy-2 { background-image: url('%static_url%/web-gallery/v2/images/rooms/room_icon_2.gif') !important; }
+.room-occupancy-3 { background-image: url('%static_url%/web-gallery/v2/images/rooms/room_icon_3.gif') !important; }
+.room-occupancy-4 { background-image: url('%static_url%/web-gallery/v2/images/rooms/room_icon_4.gif') !important; }
+.room-occupancy-5 { background-image: url('%static_url%/web-gallery/v2/images/rooms/room_icon_5.gif') !important; }
 </style>
 
 <div id="rooms-habblet-list-container-h124" class="recommendedrooms-lite-habblet-list-container"> 

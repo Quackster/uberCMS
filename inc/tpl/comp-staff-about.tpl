@@ -1,15 +1,15 @@
 <div class="habblet-container ">		
 <div class="cbb clearfix white "> 
 
-<h2 class="title">Uber Staff</h2>
+<h2 class="title">%site_name% Staff</h2>
 
 <div class="box-content">
 
 	<img src="http://images.habbo.com/c_images/album1584/ADM.gif" align="right">
 	
 	<p>
-		Uber Staff develops, manages, and moderates the hotel. They make sure everything
-		is working smoothly and the users are safe. All Uber Staff is listed on this page,
+		%site_name% Staff develops, manages, and moderates the hotel. They make sure everything
+		is working smoothly and the users are safe. All %site_name% Staff is listed on this page,
 		and you can always recognize them by their staff badge in the hotel.
 	</p>
 

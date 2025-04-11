@@ -80,7 +80,7 @@ class uberUsers
 	
 	function Add($username = '', $passwordHash = '', $email = 'default@localhost', $rank = 1, $figure = '', $sex = 'M')
 	{
-		dbquery("INSERT INTO users (username,password,mail,auth_ticket,rank,look,gender,motto,credits,activity_points,last_online,account_created) VALUES ('" . $username . "','" . $passwordHash . "','" . $email . "','','" . $rank . "','" . $figure . "','" . $sex . "','','500','1000','','" . date('d-M-Y') . "')");		
+		dbquery("INSERT INTO users (username,password,mail,auth_ticket,rank,look,gender,motto,credits,activity_points,last_online,account_created,ip_last,ip_reg) VALUES ('" . $username . "','" . $passwordHash . "','" . $email . "','','" . $rank . "','" . $figure . "','" . $sex . "','','500','1000','','" . date('d-M-Y') . "','" . USER_IP . "','" . USER_IP . "')");		
 		$id = intval(mysql_result(dbquery("SELECT id FROM users WHERE username = '" . $username . "' ORDER BY id DESC LIMIT 1"), 0));
 		dbquery("INSERT INTO user_info (user_id,bans,cautions,reg_timestamp,login_timestamp,cfhs,cfhs_abusive) VALUES ('" . $id . "','0','0','" . time(). "','" . time() . "','0','0')");
 		return $id;

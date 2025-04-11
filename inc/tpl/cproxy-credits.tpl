@@ -1,12 +1,12 @@
 <div class="habblet-container ">		
 			<div class="cbb clearfix blue ">
-			<h2 class="title">Uber Credits
+			<h2 class="title">%site_name% Credits
 			<span class="habblet-close"></span></h2>
 			
 			<div style="padding: 15px;">
 
 				<p>
-					<b>Uber credits are free!</b><br />
+					<b>%site_name% credits are free!</b><br />
 					Our credits are free and always will be! Check out the <a href="/credits" target="_new">credits</a>
 					page for more information on how to get credits.
 				</p>
@@ -23,6 +23,6 @@
 	</div>
 
 	<!-- dependencies
-	<link rel="stylesheet" href="http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/newcredits.css" type="text/css" />
-	<script src="http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/newcredits.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="%static_url%/web-gallery/v2/styles/newcredits.css" type="text/css" />
+	<script src="%static_url%/web-gallery/static/js/newcredits.js" type="text/javascript"></script>
 	-->

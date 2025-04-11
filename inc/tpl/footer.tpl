@@ -10,7 +10,7 @@ Pngfix.doPngImageFix();
 
 if (defined('FORCE_MAINTENANCE') && FORCE_MAINTENANCE)
 {
-	echo '<div style="background-color: #FBEFEF; padding: 5px; margin: 5px; border: 1px solid #DF0101;">NOTICE: Uber is currently in maintenance mode. The site is inaccessible to regular users.</div>';
+	echo '<div style="background-color: #FBEFEF; padding: 5px; margin: 5px; border: 1px solid #DF0101;">NOTICE: %site_name% is currently in maintenance mode. The site is inaccessible to regular users.</div>';
 }
 
 ?>
@@ -20,9 +20,11 @@ if (defined('FORCE_MAINTENANCE') && FORCE_MAINTENANCE)
 	<p class="copyright">uberHotel, Copyright &copy; 2009 - 2010 Meth0d dot org. All rights reserved to their respective owner(s).</p> 
 </div>
 
+<!--
 <div style="float: right;">
-	<a href="http://habboplanet.org/index.php?a=in&u=Uber"><img src="http://habboplanet.org/button.php?u=Uber" alt="HabboPlanet" border="0" /></a>
+	<a href="http://habboplanet.org/index.php?a=in&u=%site_name%"><img src="http://habboplanet.org/button.php?u=%site_name%" alt="HabboPlanet" border="0" /></a>
 </div>
+-->
 
 <div style="clear: both;"></div>
 	

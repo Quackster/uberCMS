@@ -26,9 +26,9 @@ $tpl->Init();
 $tpl->AddGeneric('head-init');
 
 $tpl->AddIncludeSet('generic');
-$tpl->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/rooms.css', 'stylesheet'));
-$tpl->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/rooms.js'));
-$tpl->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/moredata.js'));
+$tpl->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/rooms.css', 'stylesheet'));
+$tpl->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/rooms.js'));
+$tpl->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/moredata.js'));
 $tpl->WriteIncludeFiles();
 
 $tpl->AddGeneric('head-overrides-generic');

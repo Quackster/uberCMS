@@ -20,7 +20,7 @@ class RoomManager
 {
 	public static function CreateRoom($name, $owner, $model)
 	{
-		dbquery("INSERT INTO rooms (roomtype,caption,owner,state,model_name) VALUES ('private','" . filter($name) . "','" . $owner . "','open','" . $model . "')");
+		dbquery("INSERT INTO rooms (roomtype,caption,owner,state,model_name,description, public_ccts, password, tags) VALUES ('private','" . filter($name) . "','" . $owner . "','open','" . $model . "','" . $owner . " has entered the building', NULL, NULL, '')");
 		return intval(mysql_result(dbquery("SELECT id FROM rooms WHERE owner = '" . $owner . "' ORDER BY id DESC LIMIT 1"), 0));
 	}
 	

@@ -1,7 +1,7 @@
 <div class="habblet-container ">		
 						<div class="cbb clearfix hcred "> 
 	
-							<h2 class="title">Uber Club: become a VIP!
+							<h2 class="title">%site_name% Club: become a VIP!
 							</h2> 
 						<div id ="habboclub-products"> 
     <div id="habboclub-clothes-container"> 

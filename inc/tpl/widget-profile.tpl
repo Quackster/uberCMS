@@ -29,7 +29,7 @@ if ($userData['online'] == "1") { $status = 'online'; }
  
 		<br class="clear" /> 
  
-			<img alt="<?php echo $status; ?>" src="http://images.habbo.com/habboweb/%web_build%/web-gallery/images/myhabbo/profile/habbo_<?php echo $status; ?>.gif" /> 
+			<img alt="<?php echo $status; ?>" src="%static_url%/web-gallery/images/myhabbo/profile/habbo_<?php echo $status; ?>.gif" /> 
 		<div class="birthday text"> 
 			Created on:
 		</div> 

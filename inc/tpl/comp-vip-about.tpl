@@ -12,11 +12,11 @@
 	<br />
 	
 	<b>Why do VIP Points cost money?</b><br />
-	In order to keep Uber alive we need some source of income, to be able to fund our upkeep,
+	In order to keep %site_name% alive we need some source of income, to be able to fund our upkeep,
 	hosting, etc. We do not believe in selling our service, but rather offering some completely
 	optional rewards to our donators.<br />
 	<br />
-	<i>Purchasing VIP Points is completely optional, but it helps keep Uber alive and gets you some nice rewards in the process!</i>
+	<i>Purchasing VIP Points is completely optional, but it helps keep %site_name% alive and gets you some nice rewards in the process!</i>
 	
 </div>
 </div>

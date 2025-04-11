@@ -5,7 +5,7 @@
 </h2> 
 
 <div id="homes-habblet-list-container" class="habblet-list-container"> 
-<img class="active-habbo-imagemap" src="http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/images/activehomes/transparent_area.gif" width="435px" height="230px" usemap="#habbomap" /> 
+<img class="active-habbo-imagemap" src="%static_url%/web-gallery/v2/images/activehomes/transparent_area.gif" width="435px" height="230px" usemap="#habbomap" /> 
          
 <?php
 

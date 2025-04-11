@@ -1,7 +1,7 @@
 <div class="habblet-container ">		
 <div class="cbb clearfix orange "> 
 
-<h2 class="title">Uber on Twitter
+<h2 class="title">%site_name% on Twitter
 </h2> 
 
 <div class="box-content"> 

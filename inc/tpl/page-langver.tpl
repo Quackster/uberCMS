@@ -1,6 +1,6 @@
 <h2>Policy verification</h2>
 
-<h3>** Uber is an English hotel, and all users must speak English.</h3>
+<h3>** %site_name% is an English hotel, and all users must speak English.</h3>
 
 <br />
 

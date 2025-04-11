@@ -105,17 +105,19 @@ $tpl->Init();
 
 $tpl->AddGeneric('head-init');
 $tpl->AddIncludeSet('default');
-$tpl->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/habboclient.css', 'stylesheet'));
-$tpl->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/habboflashclient.css', 'stylesheet'));
-$tpl->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/habboflashclient.js'));			
+$tpl->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/habboclient.css', 'stylesheet'));
+$tpl->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/habboflashclient.css', 'stylesheet'));
+$tpl->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/habboflashclient.js'));			
 $tpl->WriteIncludeFiles();
 $tpl->AddGeneric('head-bottom');
 
 $client = new Template('page-client');
 $client->SetParam('page_title', ' ');
 $client->SetParam('sso_ticket', $users->GetUserVar(USER_ID, 'auth_ticket', false));
-$client->SetParam('flash_base', 'http://images.habbo.com/gordon/RELEASE47-25298-25289-201003111232_95572236204420188d53c5fb779d43f4/');
-$client->SetParam('flash_client_url', 'http://images.habbo.com/dcr/r47_none_74f18727eeee7d2cd329f9c7c9078061/');
+$client->SetParam('external_variables', 'http://sandbox.h4bbo.net/gamedata/external_variables.txt');
+$client->SetParam('external_flash_texts', 'http://sandbox.h4bbo.net/gamedata/external_flash_texts.txt');
+$client->SetParam('flash_base', 'https://sandbox.h4bbo.net/gordon/RELEASE49-26182-26181-201004270119_de461464ed1e27f56cc890464241d93b/');
+$client->SetParam('flash_client_url', 'https://sandbox.h4bbo.net/gordon/RELEASE49-26182-26181-201004270119_de461464ed1e27f56cc890464241d93b/');
 $client->SetParam('hotel_status', $core->GetUsersOnline() . ' users online now!');
 $client->SetParam('forwardType', $forwardType);
 $client->SetParam('forwardId', $forwardId);

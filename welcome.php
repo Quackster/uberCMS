@@ -28,7 +28,7 @@ $tpl->Init();
 
 $tpl->AddGeneric('head-init');
 $tpl->AddIncludeSet('process-template');
-$tpl->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/welcome.css', 'stylesheet'));		
+$tpl->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/welcome.css', 'stylesheet'));		
 $tpl->WriteIncludeFiles();
 $tpl->AddGeneric('head-overrides-generic');
 $tpl->AddGeneric('head-bottom');

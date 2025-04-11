@@ -1,5 +1,5 @@
 
-<!-- Uber style overrides --> 
+<!-- %static_url% style overrides --> 
 <style type="text/css"> 
 body { background-color: #EFFBFB; }
 #fp-container #header h1 a { height: 49px; width: 200px; background-image: url('%www%/images/logo.png'); }
@@ -14,4 +14,4 @@ a.big-button { top: 100px; }
 .tagcloud .tag { margin: 5px; text-decoration: none; color: #424242; }
 .tagcloud .tag:hover { border-bottom: 1px dotted; }
 </style> 
-<!-- Uber style overrides --> 
+<!-- %static_url% style overrides --> 

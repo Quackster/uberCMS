@@ -30,10 +30,10 @@
 				<div class="habblet-container ">		
 						<div class="cbb clearfix welcome "> 
 	
-							<h2 class="title">Pick a room and get started in Uber
+							<h2 class="title">Pick a room and get started in %site_name%
 							</h2> 
 						<div id="roomselection-welcome-intro" class="box-content"> 
-    Welcome to the virtual world of Uber. Click the room you like and receive a new piece of furniture during your first visits to Uber! When you select a room, Uber will open up in a pop up window.
+    Welcome to the virtual world of %site_name%. Click the room you like and receive a new piece of furniture during your first visits to %site_name%! When you select a room, %site_name% will open up in a pop up window.
 </div> 
 <ul class="roomselection-welcome clearfix"> 
 	<li class="odd"> 
@@ -76,7 +76,7 @@
             Welcome %habboName%!
     </div> 
     <div id="welcome-intro-welcome-party" class="box-content"> 
-            Select a room and enter Uber. If you are looking for help, just look for Guides from the navigator.
+            Select a room and enter %site_name%. If you are looking for help, just look for Guides from the navigator.
     </div> 
 </div> 
  
@@ -118,7 +118,7 @@
 							</h2> 
 						<div class="welcome-flash clearfix box-content"> 
     <div id="welcome-flash-text">When you open uberHotel for the first time you might need to install Flash. But don't worry, it's as easy as 1-2-3!</div> 
-    <div id="welcome-flash-logo"><img  src="http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/images/welcome/inst_flash.gif" alt="flash" /></div> 
+    <div id="welcome-flash-logo"><img  src="%static_url%/web-gallery/v2/images/welcome/inst_flash.gif" alt="flash" /></div> 
 </div> 
 	
 						

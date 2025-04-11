@@ -32,8 +32,8 @@ $tpl->Init();
 $tpl->AddGeneric('head-init');
 
 $tpl->AddIncludeSet('generic');
-$tpl->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/newcredits.css', 'stylesheet'));
-$tpl->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/newcredits.js'));
+$tpl->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/newcredits.css', 'stylesheet'));
+$tpl->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/newcredits.js'));
 $tpl->WriteIncludeFiles();
 
 $tpl->AddGeneric('head-overrides-generic');

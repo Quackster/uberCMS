@@ -26,10 +26,11 @@ class uberTpl
 	{
 		global $core, $users;
 	
-		$this->SetParam('', 'Uber');
+		$this->SetParam('site_name', 'Uber');
 		$this->SetParam('body_id', '');
 		$this->SetParam('page_title', ' ');
 		$this->SetParam('flash_build', 'flash_51_45');
+		$this->SetParam('static_url', 'http://localhost');
 		$this->SetParam('web_build', '51_b4ea29afdff17a13afb841a9811ebf55/4');
 		$this->SetParam('web_build_str', '51-BUILD45 - 18.05.2010 16:16 - uk');
 		$this->SetParam('req_path', WWW);
@@ -56,72 +57,74 @@ class uberTpl
 		{
 			case "frontpage":
 			
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/libs2.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/landing.js'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/frontpage.css', 'stylesheet'));			
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/libs2.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/landing.js'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/frontpage.css', 'stylesheet'));			
+//				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/static/styles/frontpage.css', 'stylesheet'));			
 				break;
 				
 			case "register":
 
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/visual.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/common.js'));			
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/style.css', 'stylesheet'));		
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/buttons.css', 'stylesheet'));	
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/boxes.css', 'stylesheet'));	
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/tooltips.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/embeddedregistration.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/simpleregistration.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/visual.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/common.js'));			
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/style.css', 'stylesheet'));		
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/buttons.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/boxes.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/tooltips.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/embeddedregistration.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/simpleregistration.js'));
 				break;
 		
 			case "process-template":
 			
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/libs2.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/visual.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/libs.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/common.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/fullcontent.js'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/style.css', 'stylesheet'));		
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/buttons.css', 'stylesheet'));	
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/boxes.css', 'stylesheet'));	
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/tooltips.css', 'stylesheet'));	
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/process.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/libs2.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/visual.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/libs.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/common.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/fullcontent.js'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/style.css', 'stylesheet'));		
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/buttons.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/boxes.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/tooltips.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/process.css', 'stylesheet'));	
 				break;
 				
 			case 'myhabbo':
 			
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/libs2.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/visual.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/libs.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/common.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/fullcontent.js'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/style.css', 'stylesheet'));		
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/buttons.css', 'stylesheet'));	
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/boxes.css', 'stylesheet'));	
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/tooltips.css', 'stylesheet'));				
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/styles/myhabbo/myhabbo.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/styles/myhabbo/skins.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/styles/myhabbo/dialogs.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/styles/myhabbo/buttons.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/styles/myhabbo/control.textarea.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/styles/myhabbo/boxes.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/myhabbo.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://www.habbo.co.uk/myhabbo/styles/assets.css', 'stylesheet'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/homeview.js'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/lightwindow.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/libs2.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/visual.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/libs.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/common.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/fullcontent.js'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/style.css', 'stylesheet'));		
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/buttons.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/boxes.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/tooltips.css', 'stylesheet'));				
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/styles/myhabbo/myhabbo.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/styles/myhabbo/skins.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/styles/myhabbo/dialogs.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/styles/myhabbo/buttons.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/styles/myhabbo/control.textarea.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/styles/myhabbo/boxes.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/myhabbo.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/styles/myhabbo/assets.css', 'stylesheet'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/homeview.js'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/lightwindow.css', 'stylesheet'));
 				break;
 			
 			case 'default':
 			default:
 			
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/libs2.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/visual.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/libs.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/common.js'));
-				$this->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/fullcontent.js'));
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/style.css', 'stylesheet'));		
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/buttons.css', 'stylesheet'));	
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/boxes.css', 'stylesheet'));	
-				$this->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/tooltips.css', 'stylesheet'));		
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/libs2.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/visual.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/libs.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/common.js'));
+				$this->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/fullcontent.js'));
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/static/styles/common.css', 'stylesheet'));		
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/style.css', 'stylesheet'));		
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/buttons.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/boxes.css', 'stylesheet'));	
+				$this->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/tooltips.css', 'stylesheet'));		
 				break;
 		}
 	}

@@ -11,7 +11,7 @@ var ad_keywords = "";
 document.habboLoggedIn = %habboLoggedIn%;
 var habboName = "%habboName%";
 var habboReqPath = "%www%";
-var habboStaticFilePath = "http://images.habbo.com/habboweb/%web_build%/web-gallery";
+var habboStaticFilePath = "%static_url%/web-gallery";
 var habboImagerUrl = "http://www.habbo.co.uk/habbo-imaging/";
 var habboPartner = "";
 var habboDefaultClientPopupUrl = "%www%/client";
@@ -46,4 +46,4 @@ window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function
 </script>
 <?php } ?>
 
-<link rel="shortcut icon" href="http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/favicon.ico" type="image/vnd.microsoft.icon" /> 
+<link rel="shortcut icon" href="%static_url%/web-gallery/v2/favicon.ico" type="image/vnd.microsoft.icon" /> 

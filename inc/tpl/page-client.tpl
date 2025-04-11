@@ -19,16 +19,16 @@ var habboDefaultClientPopupUrl = "%www%/client";
     var flashvars = {
             "client.allow.cross.domain" : "1", 
             "client.notify.cross.domain" : "0", 
-            "connection.info.host" : "67.43.62.3", 
-            "connection.info.port" : "2000", 
+            "connection.info.host" : "127.0.0.1", 
+            "connection.info.port" : "30001", 
             "site.url" : "%www%", 
             "url.prefix" : "%www%", 
             "client.reload.url" : "%www%/account/reauthenticate?page=/flash_client", 
             "client.fatal.error.url" : "%www%/flash_client_error", 
             "client.connection.failed.url" : "%www%/client_connection_failed", 
             "external.hash" : "", 
-            "external.variables.txt" : "%www%/gamedata/external?id=external_variables", 
-            "external.texts.txt" : "%www%/gamedata/external?id=external_flash_texts", 
+            "external.variables.txt" : "%external_variables%", 
+            "external.texts.txt" : "%external_flash_texts%", 
             "use.sso.ticket" : "1",
 <?php
 
@@ -65,7 +65,7 @@ if ($forwardType > 0)
             clientUrl = "%flash_base%Habbo.swf"; 
         }
     } catch(e) {}
-    swfobject.embedSWF(clientUrl, "flash-container", "100%", "100%", "9.0.115", "http://images.habbo.com/habboweb/%web_build%/web-gallery/flash/expressInstall.swf", flashvars, params);
+    swfobject.embedSWF(clientUrl, "flash-container", "100%", "100%", "9.0.115", "%static_url%/web-gallery/flash/expressInstall.swf", flashvars, params);
 </script> 
  
 <div id="overlay"></div> 
@@ -77,7 +77,7 @@ if ($forwardType > 0)
     <h2 class="title">Please install Adobe Flash Player.</h2> 
     <div class="box-content"> 
             <p>You can install and download Adobe Flash Player here: <a href="http://get.adobe.com/flashplayer/">Install flash player</a>. More instructions for installation can be found here: <a href="http://www.adobe.com/products/flashplayer/productinfo/instructions/">More information</a></p> 
-            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://images.habbo.com/habboweb/45_0061af58e257a7c6b931c91f771b4483/2/web-gallery/v2/images/client/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p> 
+            <p><a href="http://www.adobe.com/go/getflashplayer"><img src="%static_url%/web-gallery/v2/images/client/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p> 
     </div> 
 </div> 
         </div> 

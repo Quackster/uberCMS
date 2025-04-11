@@ -12,7 +12,7 @@
 <?php } ?>
             	
 <div id="settings-editor"> 
-You need to have a Flash player installed on your computer before being able to edit your Uber character. You can download the player from here: <a target="_blank" href="http://www.adobe.com/go/getflashplayer">http://www.adobe.com/go/getflashplayer</a> 
+You need to have a Flash player installed on your computer before being able to edit your %site_name% character. You can download the player from here: <a target="_blank" href="http://www.adobe.com/go/getflashplayer">http://www.adobe.com/go/getflashplayer</a> 
 </div> 
  
 <div id="settings-wardrobe" style="display: none"> 
@@ -21,7 +21,7 @@ You need to have a Flash player installed on your computer before being able to 
 <div id="settings-hc" style="display: none"> 
 	<div class="rounded rounded-hcred clearfix"> 
 <a href="/credits/habboclub" id="settings-hc-logo"></a> 
-You have selected items marked with the Uber Club symbol <img src="http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/images/habboclub/hc_mini.png" />, but they are available only to Uber Club members. <a href="%www%/credits/uberclub">Join now!</a> or change your outfit.
+You have selected items marked with the %site_name% Club symbol <img src="%static_url%/web-gallery/v2/images/habboclub/hc_mini.png" />, but they are available only to %site_name% Club members. <a href="%www%/credits/uberclub">Join now!</a> or change your outfit.
 	</div> 
 </div> 
  

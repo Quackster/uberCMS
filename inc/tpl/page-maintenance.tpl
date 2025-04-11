@@ -4,7 +4,7 @@
 <head> 
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
-	<title>Uber: Maintenance Break</title> 
+	<title>%site_name%: Maintenance Break</title> 
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
 	<script type="text/javascript" src="http://error.habbo.com/uk/js/jquery.tweet.js"></script> 
@@ -31,7 +31,7 @@
 <h1>Maintenance break!</h1> 
  
 <p> 
-Sorry! Uber is having a bit of work done at the moment.<br><br> 
+Sorry! %site_name% is having a bit of work done at the moment.<br><br> 
 We will be back soon.
 <p> 
  

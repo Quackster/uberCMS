@@ -41,11 +41,11 @@ $tpl->SetParam('page_title', 'Home');
 // Generate page header
 $tpl->AddGeneric('head-init');
 $tpl->AddIncludeSet('generic');
-$tpl->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/personal.css', 'stylesheet'));
-$tpl->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/habboclub.js'));
-$tpl->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/minimail.css', 'stylesheet'));
-$tpl->AddIncludeFile(new IncludeFile('text/css', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/styles/myhabbo/control.textarea.css', 'stylesheet'));
-$tpl->AddIncludeFile(new IncludeFile('text/javascript', 'http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/minimail.js'));
+$tpl->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/personal.css', 'stylesheet'));
+$tpl->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/habboclub.js'));
+$tpl->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/v2/styles/minimail.css', 'stylesheet'));
+$tpl->AddIncludeFile(new IncludeFile('text/css', '%static_url%/web-gallery/styles/myhabbo/control.textarea.css', 'stylesheet'));
+$tpl->AddIncludeFile(new IncludeFile('text/javascript', '%static_url%/web-gallery/static/js/minimail.js'));
 $tpl->WriteIncludeFiles();
 $tpl->AddGeneric('head-overrides-generic');
 $tpl->AddGeneric('head-bottom');

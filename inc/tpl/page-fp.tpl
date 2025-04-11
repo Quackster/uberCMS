@@ -80,14 +80,14 @@ HabboView.add(function() {window.setTimeout(function() {RememberMeUI.init("newfr
 				
 				<!--
 				
-				(Uber PedoSeal)
+				(%site_name% PedoSeal)
 				
 				<div class="habblet-container pedobear" style="position: absolute; top: 300px; left: 700px; z-index: 100;">
 					<img src="%www%/images/seal.png">
 				</div> 
 				<script type="text/javascript">if (!$(document.body).hasClassName('process-template')) { Rounder.init(); }</script>  
 				
-				(Uber PedoSeal)
+				(%site_name% PedoSeal)
 				
 				-->
 			     		
@@ -100,11 +100,12 @@ HabboView.add(function() {window.setTimeout(function() {RememberMeUI.init("newfr
 <div style="height: 2px"></div> 
 </div> 
  
+<!--
 <a href="%www%/register" class="big-button" onclick="location.href=this.href"> 
     <table> 
-        <tr><td align="center" valign="middle">Join Uber for FREE!</td></tr> 
+        <tr><td align="center" valign="middle">Join %static_url% for FREE!</td></tr> 
     </table> 
-</a> 
+</a> --> 
 	
 						
 							

@@ -1,12 +1,12 @@
 <div class="habblet-container ">		
 						<div class="cbb clearfix red "> 
 	
-							<h2 class="title">Uber Club Test Wardrobe
+							<h2 class="title">%site_name% Club Test Wardrobe
 							</h2> 
 						<div id="habboclub-tryout" class="box-content"> 
  
     <div class="rounded rounded-lightbrown clearfix"> 
-       <p class="habboclub-logo heading">Try on the club clothes for free here, but you'll need to join Uber Club to wear them in the hotel.<br /><br />If you just want to change your look, please go back to your <a href="%www%/profile">Account Settings.</a></p> 
+       <p class="habboclub-logo heading">Try on the club clothes for free here, but you'll need to join %site_name% Club to wear them in the hotel.<br /><br />If you just want to change your look, please go back to your <a href="%www%/profile">Account Settings.</a></p> 
     </div> 
  
     <div id="flashcontent"> 

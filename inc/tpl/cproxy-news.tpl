@@ -66,6 +66,6 @@
 </div>
 
 <!-- dependencies
-<link rel="stylesheet" href="http://images.habbo.com/habboweb/%web_build%/web-gallery/v2/styles/news.css" type="text/css" />
-<script src="http://images.habbo.com/habboweb/%web_build%/web-gallery/static/js/news.js" type="text/javascript"></script>
+<link rel="stylesheet" href="%static_url%/web-gallery/v2/styles/news.css" type="text/css" />
+<script src="%static_url%/web-gallery/static/js/news.js" type="text/javascript"></script>
 -->

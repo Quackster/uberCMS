@@ -6,7 +6,7 @@
 <div class="box-content">
 
 <p>
-	In order to get VIP Points, you will need to purchase them. Uber will use the money
+	In order to get VIP Points, you will need to purchase them. %site_name% will use the money
 	you use to buy VIP Points to fund our upkeep.
 </p>
 

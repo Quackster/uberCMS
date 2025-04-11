@@ -1,7 +1,7 @@
 <div class="habblet-container ">		
 <div class="cbb clearfix orange "> 
 	
-<h2 class="title">Get Uber Credits</h2> 
+<h2 class="title">Get %site_name% Credits</h2> 
 
 <div class="method-group online clearfix"> 
 	<div class="method idx0"> 
@@ -10,7 +10,7 @@
 			<h2>Free credits!</h2> 
 			<div class="summary clearfix">    
 				
-            Uber credits are FREE! Every 3 hours, we will top up and refil your credits up to an amount of
+            %site_name% credits are FREE! Every 3 hours, we will top up and refil your credits up to an amount of
 			3000, to make sure you never run out. You don't even need to be signed in to the hotel!
 			
 			
@@ -86,7 +86,7 @@
 			
 			function showCountdownResult()
 			{
-				document.getElementById('credits-countdown').innerHTML = "<h3 style='color: darkgreen;'>Credits update!</h3><p>We have just sent out a credits update. Check your inventory on Uber!</p>";
+				document.getElementById('credits-countdown').innerHTML = "<h3 style='color: darkgreen;'>Credits update!</h3><p>We have just sent out a credits update. Check your inventory on %site_name%!</p>";
 				window.setTimeout("location.reload(true);", 2500);
 			}
 			
@@ -146,7 +146,7 @@ document.observe("dom:loaded", function() { new CreditsList(); });
  
  
 <div class="disclaimer" style="border: 0 !important;"> 
-    <h3><span>Uber credits are free</span></h3> 
+    <h3><span>%site_name% credits are free</span></h3> 
     We will never charge you for credits! Our credits are, always have been, and always will be free.<br />
 	If you have questions please contact us at <a href="mailto:ubersupport@meth0d.org">ubersupport@meth0d.org</a>.
 </div> 

@@ -9,10 +9,10 @@
     <div class="pixels-infobox-text"> 
             <h3>You can earn Pixels in a variety of ways:</h3> 
             <ul> 
-                <li><p>1. Sign into Uber once a day</p></li> 
-                <li><p>2. Get rewarded for spending time each day in Uber- the longer you stay the more you earn!</p></li> 
+                <li><p>1. Sign into %site_name% once a day</p></li> 
+                <li><p>2. Get rewarded for spending time each day in %site_name%- the longer you stay the more you earn!</p></li> 
                 <li><p>3. Complete Achievements and give respect to other users</p></li> 
-                <li><p>4. Join <a href="%www%/credits/uberclub">Uber Club</a>!</p></li> 
+                <li><p>4. Join <a href="%www%/credits/uberclub">%site_name% Club</a>!</p></li> 
             </ul> 
             <p>How to spend? Check out the catalogue and the Pixel Shop!</p> 
             <p><a href="%www%/help" target="_blank">FAQ</a></p> 

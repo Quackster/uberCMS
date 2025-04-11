@@ -16,13 +16,13 @@
 | GNU General Public License for more details.
 \======================================================================*/
 
-$config['Site']['www'] = "http://86.28.135.185";
+$config['Site']['www'] = "http://localhost";
 $config['Site']['hash_secret'] = "xCg532%@%gdvf^5DGaa6&*rFTfg^FD4\$OIFThrR_gh(ugf*/";
 
 $config['MySQL']['hostname'] = "localhost";
 $config['MySQL']['username'] = "root";
-$config['MySQL']['password'] = "password";
-$config['MySQL']['database'] = "ubercms";
+$config['MySQL']['password'] = "verysecret";
+$config['MySQL']['database'] = "ubercms2";
 
 $config['MUS']['enabled'] = false;
 $config['MUS']['ip'] = "172.16.0.2";

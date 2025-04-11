@@ -137,12 +137,14 @@ if (isset($_GET['doSubmit']))
 			$registerErrors[] = "You must verify you will speak English to creat an account.";
 		}*/
 		
+		/*
 		$resp = recaptcha_check_answer ('6Le-aQoAAAAAAKaqhlUT0lAQbjqokPqmj0F1uvQm', $_SERVER["REMOTE_ADDR"], $_POST["recaptcha_challenge_field"], $_POST["recaptcha_response_field"]);
 							
 		if (!$resp->is_valid)
 		{
 			$registerErrors[] = "Invalid captcha code.";
 		}	
+		*/
 		
 		if (count($registerErrors) <= 0)
 		{			

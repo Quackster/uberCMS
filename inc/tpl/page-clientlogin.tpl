@@ -5,9 +5,9 @@
 						<div class="cbb clearfix green"> 
     <h2 class="title">Register for free</h2> 
     <div class="box-content"> 
-        <p>Register for free by clicking the Join Uber button below. If you have already registered, please sign in on the right.</p> 
+        <p>Register for free by clicking the Join %site_name% button below. If you have already registered, please sign in on the right.</p> 
         <div class="register-button clearfix"> 
-            <a href="%www%/register" onclick="HabboClient.closeHabboAndOpenMainWindow(this); return false;">Join Uber for FREE</a> 
+            <a href="%www%/register" onclick="HabboClient.closeHabboAndOpenMainWindow(this); return false;">Join %site_name% for FREE</a> 
             <span></span> 
         </div>                
     </div> 

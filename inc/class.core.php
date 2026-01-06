@@ -26,9 +26,10 @@ class uberCore
 		$this->execStart = microtime(true);
 	}	
 	
-	public static function CheckBetaKey($keyCode)
+	public static function CheckBetaKey(string $keyCode): bool
 	{
-		return (mysql_num_rows(dbquery("SELECT null FROM betakeys WHERE keyc = '" . filter($keyCode) . "' AND qty > 0 LIMIT 1")) > 0) ? true : false;
+		$result = dbquery("SELECT null FROM betakeys WHERE keyc = '" . filter($keyCode) . "' AND qty > 0 LIMIT 1");
+		return $result ? mysqli_num_rows($result) > 0 : false;
 	}
 	
 	public static function EatBetaKey($keyCode)
@@ -36,29 +37,29 @@ class uberCore
 		dbquery("UPDATE betakeys SET qty = qty - 1 WHERE keyc = '" . filter($keyCode) . "' LIMIT 1");
 	}
 	
-	public static function CheckCookies()
+	public static function CheckCookies(): void
 	{
 		if (LOGGED_IN)
 		{
 			return;
 		}
-	
+
 		if (isset($_COOKIE['rememberme']) && $_COOKIE['rememberme'] == "true" && isset($_COOKIE['rememberme_token']) && isset($_COOKIE['rememberme_name']))
 		{
 			$name = filter($_COOKIE['rememberme_name']);
 			$token = filter($_COOKIE['rememberme_token']);
 			$find = dbquery("SELECT id,username FROM users WHERE username = '" . $name . "' AND password = '" . $token . "' LIMIT 1");
-			
-			if (mysql_num_rows($find) > 0)
+
+			if ($find && mysqli_num_rows($find) > 0)
 			{
-				$data = mysql_fetch_assoc($find);
-				
+				$data = mysqli_fetch_assoc($find);
+
 				$_SESSION['UBER_USER_N'] = $data['username'];
 				$_SESSION['UBER_USER_H'] = $token;
 				$_SESSION['set_cookies'] = true; // renew cookies
-				
+
 				header("Location: " . WWW . "/security_check");
-				exit;				
+				exit;
 			}
 		}
 	}
@@ -83,9 +84,10 @@ class uberCore
 		return $ticket;
 	}
 	
-	public static function FilterInputString($strInput = '')
+	public static function FilterInputString(string $strInput = ''): string
 	{
-		return mysql_real_escape_string(stripslashes(trim($strInput)));
+		global $db;
+		return $db->Escape(stripslashes(trim($strInput)));
 	}
 	
 	public static function FilterSpecialChars($strInput, $allowLB = false)
@@ -179,19 +181,34 @@ class uberCore
 		}
 	}
 	
-	public static function GetSystemStatus()
+	public static function GetSystemStatus(): int
 	{
-		return intval(mysql_result(dbquery("SELECT status FROM server_status LIMIT 1"), 0));
+		$result = dbquery("SELECT status FROM server_status LIMIT 1");
+		if ($result) {
+			$row = mysqli_fetch_row($result);
+			return intval($row[0] ?? 0);
+		}
+		return 0;
 	}
 	
-	public static function GetUsersOnline()
+	public static function GetUsersOnline(): int
 	{
-		return intval(mysql_result(dbquery("SELECT users_online FROM server_status LIMIT 1"), 0));
+		$result = dbquery("SELECT users_online FROM server_status LIMIT 1");
+		if ($result) {
+			$row = mysqli_fetch_row($result);
+			return intval($row[0] ?? 0);
+		}
+		return 0;
 	}
 	
-	public static function GetMaintenanceStatus()
+	public static function GetMaintenanceStatus(): string
 	{
-		return mysql_result(dbquery("SELECT maintenance FROM site_config LIMIT 1"), 0);
+		$result = dbquery("SELECT maintenance FROM site_config LIMIT 1");
+		if ($result) {
+			$row = mysqli_fetch_row($result);
+			return $row[0] ?? '0';
+		}
+		return '0';
 	}
 	
 	public function Mus($header, $data = '')

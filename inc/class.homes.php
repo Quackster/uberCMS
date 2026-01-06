@@ -18,19 +18,25 @@
 
 class HomesManager
 {
-	public static function HomeExists($linkType = 'user', $linkId)
+	public static function HomeExists(string $linkType = 'user', int $linkId): bool
 	{
-		return ((mysql_num_rows(dbquery("SELECT null FROM homes WHERE link_type = '" . strtolower($linkType) . "' AND link_id = '" . intval($linkId) . "' LIMIT 1")) > 0) ? true : false);
+		$result = dbquery("SELECT null FROM homes WHERE link_type = '" . strtolower($linkType) . "' AND link_id = '" . intval($linkId) . "' LIMIT 1");
+		return $result ? mysqli_num_rows($result) > 0 : false;
 	}
 	
-	public static function GetHomeId($linkType, $linkId)
+	public static function GetHomeId(string $linkType, int $linkId): int
 	{
 		if (!HomesManager::HomeExists($linkType, $linkId))
 		{
 			return 0;
 		}
-		
-		return intval(mysql_result(dbquery("SELECT home_id FROM homes WHERE link_type = '" . strtolower($linkType) . "' AND link_id = '" . intval($linkId) . "' LIMIT 1"), 0));
+
+		$result = dbquery("SELECT home_id FROM homes WHERE link_type = '" . strtolower($linkType) . "' AND link_id = '" . intval($linkId) . "' LIMIT 1");
+		if ($result) {
+			$row = mysqli_fetch_row($result);
+			return intval($row[0] ?? 0);
+		}
+		return 0;
 	}
 	
 	public static function CreateHome($linkType, $linkId)
@@ -51,9 +57,10 @@ class HomesManager
 		return $homeId;
 	}
 	
-	public static function GetHomeDataRow($id)
+	public static function GetHomeDataRow(int $id): ?array
 	{
-		return mysql_fetch_assoc(dbquery("SELECT * FROM homes WHERE home_id = '" . $id . "' LIMIT 1"));
+		$result = dbquery("SELECT * FROM homes WHERE home_id = '" . $id . "' LIMIT 1");
+		return $result ? mysqli_fetch_assoc($result) : null;
 	}
 	
 	public static function GetHome($id)
@@ -75,7 +82,7 @@ class Home
 	public $linkType = '';
 	public $linkId = 0;
 	
-	public function Home($id, $linkType, $linkId)
+	public function __construct(int $id, string $linkType, int $linkId)
 	{
 		$this->id = $id;
 		$this->linkType = $linkType;
@@ -87,16 +94,18 @@ class Home
 		dbquery("INSERT INTO homes_items (home_id,type,x,y,z,data,skin,owner_id) VALUES ('" . $this->id .  "','" . $type . "','" . $x . "','" . $y . "','" . $z . "','" . filter($data) . "','" . $skin . "','" . $ownerId . "')");
 	}
 	
-	public function GetItems()
+	public function GetItems(): array
 	{
-		$list = Array();
+		$list = [];
 		$get = dbquery("SELECT * FROM homes_items WHERE home_id = '" . $this->id . "' ORDER BY type ASC");
-		
-		while ($item = mysql_fetch_assoc($get))
-		{
-			$list[] = new HomeItem($item['id'], $item['home_id'], $item['type'], $item['data'], $item['skin'], $item['x'], $item['y'], $item['z'], $item['owner_id']);
+
+		if ($get) {
+			while ($item = mysqli_fetch_assoc($get))
+			{
+				$list[] = new HomeItem((int)$item['id'], (int)$item['home_id'], $item['type'], $item['data'], $item['skin'], (int)$item['x'], (int)$item['y'], (int)$item['z'], (int)$item['owner_id']);
+			}
 		}
-		
+
 		return $list;
 	}
 }
@@ -116,7 +125,7 @@ class HomeItem
 	
 	public $ownerId = 0;
 	
-	public function HomeItem($id, $homeId, $type, $data, $skin, $x, $y, $z, $ownerId)
+	public function __construct(int $id, int $homeId, string $type, string $data, string $skin, int $x, int $y, int $z, int $ownerId)
 	{
 		$this->id = $id;
 		$this->homeId = $homeId;

@@ -18,70 +18,87 @@
 
 class MySQL
 {
-	private $connected = false;
-	private $hostname = "localhost";
-	private $username = "uber_uberdb";
-	private $password = "F5eWRuca";
-	private $database = "uber_db";
-	private $link;
-	
-	public function MySQL($host, $user, $pass, $db)
+	private bool $connected = false;
+	private string $hostname = "localhost";
+	private string $username = "uber_uberdb";
+	private string $password = "F5eWRuca";
+	private string $database = "uber_db";
+	private ?mysqli $link = null;
+
+	public function __construct(string $host, string $user, string $pass, string $db)
 	{
-		$this->connected = false;	
+		$this->connected = false;
 		$this->hostname = $host;
 		$this->username = $user;
 		$this->password = $pass;
 		$this->database = $db;
 	}
-	
-	public function IsConnected()
+
+	public function IsConnected(): bool
 	{
-		if ($this->connected)
-		{
-			return true;
-		}
-		
-		return false;
+		return $this->connected;
 	}
 
-	public function Connect()
+	public function Connect(): void
 	{
-		$this->link = mysql_connect($this->hostname, $this->username, $this->password) or $this->error(mysql_error());
-		mysql_select_db($this->database, $this->link) or $this->error(mysql_error());
-	 	
+		$this->link = mysqli_connect($this->hostname, $this->username, $this->password, $this->database);
+		if (!$this->link) {
+			$this->error(mysqli_connect_error());
+		}
+
 		$this->connected = true;
 	}
-	
-	public function Disconnect()
+
+	public function Disconnect(): void
 	{
-		if($this->connected)
-		{
-			@mysql_close($this->link) or $this->error("could not close conn");
+		if ($this->connected && $this->link) {
+			mysqli_close($this->link);
 			$this->connected = false;
 		}
 	}
-	
-	public function DoQuery($query)
+
+	public function DoQuery(string $query)
 	{
-		$resultset = @mysql_query($query, $this->link) or $this->error(mysql_error());
+		if (!$this->link) {
+			$this->error('No database connection');
+			return false;
+		}
+		$resultset = mysqli_query($this->link, $query);
+		if ($resultset === false) {
+			$this->error(mysqli_error($this->link));
+		}
 		return $resultset;
 	}
-	
+
 	public function Evaluate($resultset)
 	{
-		return @mysql_result($resultset, 0);
+		if ($resultset instanceof mysqli_result) {
+			$row = mysqli_fetch_row($resultset);
+			return $row[0] ?? null;
+		}
+		return null;
 	}
-	
-	public function Error($errorString)
+
+	public function Escape(string $str): string
+	{
+		return mysqli_real_escape_string($this->link, $str);
+	}
+
+	public function AffectedRows(): int
+	{
+		return mysqli_affected_rows($this->link);
+	}
+
+	public function Error(string $errorString): void
 	{
 		global $core;
-		
+
 		$core->systemError('Database Error', $errorString);
 	}
-	
+
 	public function __destruct()
 	{
-		$this->disconnect();
+		$this->Disconnect();
 	}
 }
 

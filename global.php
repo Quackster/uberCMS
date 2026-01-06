@@ -27,7 +27,6 @@ define('CWD', str_replace('manage' . DS, '', dirname(__FILE__) . DS));
 define('INCLUDES', CWD . 'inc' . DS);
 define('USER_IP', $_SERVER['REMOTE_ADDR']);
 
-set_magic_quotes_runtime('0');
 error_reporting(E_ALL);
 
 session_start();

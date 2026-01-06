@@ -193,7 +193,7 @@ class Template
 	private $params = Array();
 	private $tplName = '';
 	
-	public function Template($tplName)
+	public function __construct(string $tplName)
 	{
 		$this->tplName = $tplName;
 	}
@@ -252,10 +252,10 @@ class IncludeFile
 	private $rel;
 	private $name;
 
-	public function IncludeFile($type, $src, $rel = '', $name = '')
+	public function __construct(string $type, string $src, string $rel = '', string $name = '')
 	{
 		global $tpl;
-	
+
 		$this->type = $type;
 		$this->src = $src;
 		$this->rel = $rel;
